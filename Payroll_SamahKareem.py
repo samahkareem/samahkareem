@@ -1,0 +1,21 @@
+#input
+EmpName=str(input("Enter the Employe Name"))
+NuHours=float(input("Enter the Number of hours worked in a week "))
+PayRate=float(input("Enter the Hourly pay rate "))
+FTax=float(input("Entert the Federal tax withholding rate "))
+STax=float(input("State tax withholding rate"))
+#calcuations
+CrossPay=int(NuHours * PayRate)
+Ftax1=float(CrossPay *( FTax* 100) / 100.0)
+STax1=float(CrossPay * (STax* 100) / 100.0)
+Deductions=float(Ftax1+STax1)
+NetPay=float(CrossPay-Deductions)
+#output
+print("Employe Name :",EmpName)
+print("Worked Hours :",NuHours)
+print("Cross Pay:",CrossPay )
+print("Deductions:")
+print("Federal Withholding: ",Ftax1)
+print("State Withholding:",STax1)
+print ("Total Deduction:",Deductions)
+print("Net Pay:",NetPay)
